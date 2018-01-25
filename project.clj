@@ -49,8 +49,7 @@
                         {:output-to "public/js/app.js"
                          :output-dir "public/js/release"
                          :npm-deps
-                         {:d3-drag "1.2.1"
-                          :d3-selection "1.2.0"}
+                         {:d3 "3.5.17"}
                          :asset-path   "js/out"
                          :optimizations :advanced
                          :pretty-print false}}}}
