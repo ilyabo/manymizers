@@ -1,0 +1,506 @@
+
+/*
+Color Scheme:
+http://paletton.com/#uid=53u0u0kaVz84jP27qHbeJtFiHpX
+*/
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  padding: 0px;
+  margin: 0;
+}
+
+
+/* Globals */
+body, input {
+  font-family: 'Source Sans Pro', Helvetica, Arial;
+  font-size: 17pt;
+  font-weight: 300;
+}
+
+input {
+}
+
+
+/* Header */
+.Header {
+  width: 100%;
+  padding: 8px 10px 8px 38px;
+  background-color: #3B6984;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.Header-table {
+  display: table;
+}
+.Header-logo {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  width: 16px;
+  padding-right: 5px;
+  opacity: 0.3;
+}
+.Header {
+  text-decoration: none;
+}
+.Header-title a {
+  text-decoration: none;
+  color: white;
+}
+.Header-title {
+  display: table-cell;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0px;
+  width: 100px;
+  vertical-align: middle;
+  text-transform: lowercase;
+  position: relative;
+  top: -0.035em;
+}
+.Header-tagline {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.1rem;
+  padding-left: 20px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* App */
+.App {
+  padding: 20px 38px 20px 38px;
+}
+
+/* Button */
+.Button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 6px 5px;
+  color: #000;
+  background-color: #fff;
+  margin-right: 5px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  opacity: 0.3;
+}
+
+.Button:last-child {
+  margin-right: 0;
+}
+
+.Button.disabled {
+  opacity: 0.1;
+}
+
+.Button:hover:not(.disabled) {
+  opacity: 1;
+}
+
+
+/* Toolbar */
+.Toolbar {
+  width: 100%;
+  text-align: right;
+  white-space: nowrap;
+  display: table;
+}
+
+.Toolbar-main {
+  display: table-cell;
+  text-align: left;
+  width: 40px;
+}
+.Toolbar-menu .DropdownMenu {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.Toolbar-undo {
+  display: table-cell;
+  text-align: left;
+}
+
+.Toolbar-menu {
+  display: table-cell;
+  text-align: right;
+}
+
+.Toolbar-menu .DropdownMenu-body {
+  right: 2px;
+  top: 36px;
+  left: auto;
+}
+.Toolbar-menu .DropdownMenu-item {
+  font-size: 1rem;
+}
+
+
+
+/* ProblemStatement */
+.ProblemStatement {
+  padding: 20px 0px 40px 0px;
+}
+
+.ProblemStatement .TextField {
+  width: 100%;
+}
+
+.ProblemStatement .TextField-input {
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.App-content {
+  display: inline-block;
+}
+
+
+
+
+/* Option */
+.Option {
+  margin-bottom: 1em;
+  width: 100%;
+  display: table;
+}
+
+.Option-name {
+  font-size: 1.2rem;
+  display: table-cell;
+}
+
+.Option > .Editable {
+  cursor: default;
+  vertical-align: middle;
+  width: 50%;
+  display: table-cell;
+}
+
+.Option-factors {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.Option-score {
+  display: table-cell;
+  font-weight: 600;
+  font-size: 1.3rem;
+  width: 100%;
+  vertical-align: middle;
+  text-align: right;
+  color: #ddd;
+}
+
+.Option-score.is-optimal {
+  color: #3C9166;
+}
+
+.Option .TextField {
+  display: table-cell;
+}
+.Option .TextField-input {
+  width: 100%;
+}
+
+/* Pane */
+.Pane-title {
+  white-space: nowrap;
+  letter-spacing: 0.025em;
+  font-size: 1.8rem;
+  margin-bottom: 1.05em;
+  margin-top: 0.6em;
+}
+
+.Pane-comment {
+  color: #aaa;
+  line-height: 1.3em;
+  margin-top: -5px;
+  font-size: 0.9rem;
+  margin-bottom: 2em;
+}
+
+
+
+/* FactorsPane */
+.FactorsPane-items {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+
+
+/* TextField */
+.TextField {
+  display: table;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.TextField-input-cell {
+  display: table-cell;
+  vertical-align: middle;
+  border-bottom: 1px solid #666;
+}
+
+.TextField-input {
+  margin-top: 5px;
+  margin-bottom: 1px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.TextField-button-cell {
+  display: table-cell;
+  width: 40px;
+  vertical-align: bottom;
+  text-align: right;
+}
+
+.TextField-button {
+  padding: 4px 4px;
+  font-size: 0.8rem;
+}
+
+
+/* Slider */
+.Slider {
+  display: inline-block;
+  background: white;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  cursor: ew-resize;
+}
+.Slider > svg {
+  border: 1px solid #ccc;
+  display: block;
+}
+
+.Slider-rect {
+  fill: none;
+  shape-rendering: crispEdges;
+}
+
+.Slider-fill-rect {
+  stroke: none;
+  fill: #ddd;
+  shape-rendering: crispEdges;
+}
+
+.Slider-axis-label {
+  dominant-baseline: middle;
+  alignment-baseline: middle;
+  font-size: 0.7rem;
+  fill: #999;
+}
+.Slider-axis-label.left {
+  text-anchor: start;
+}
+.Slider-axis-label.right {
+  text-anchor: end;
+}
+
+.Factor .Slider-fill-rect {
+  fill: #C4E3D3;
+}
+
+.Option .Slider-fill-rect {
+  fill: #C1D2DC;
+}
+
+.Slider-text {
+  font-size: 0.9rem;
+  dominant-baseline: middle;
+  alignment-baseline: middle;
+  text-anchor: middle;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Editable */
+.Editable {
+  display: table;
+  position: relative;
+  left: -20px;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.Editable-children {
+  display: table-cell;
+  vertical-align: middle;
+}
+.Editable .DropdownMenu {
+  padding: 5px;
+  display: table-cell;
+}
+
+
+/* DropdownMenu */
+.DropdownMenu {
+  text-align: left;
+  width: 20px;
+  vertical-align: top;
+  color: #ddd;
+  cursor: pointer;
+  position: relative;
+}
+.DropdownMenu-button:hover {
+  color: #000;
+}
+.DropdownMenu-body {
+  position: absolute;
+  background-color: white;
+  padding: 5px 0px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  top: 25px;
+  left: 4px;
+  z-index: 9999;
+  box-shadow: 0 0 2px #ddd;
+}
+.DropdownMenu-item {
+  font-size: 0.8rem;
+  font-style: normal;
+  white-space: nowrap;
+  padding: 4px 8px;
+  color: #000;
+  cursor: pointer;
+}
+.DropdownMenu-item > i {
+  margin-right: 3px;
+}
+.DropdownMenu-item:hover {
+  color: #000;
+  background-color: #f0f0f0;
+}
+.DropdownMenu-item-text {
+  margin-left: 5px;
+}
+
+
+/* Panes */
+.Panes {
+  display: table;
+}
+.Pane {
+  min-width: 200px;
+  display: table-cell;
+  padding: 0 25px 25px 25px;
+  border-right: 1px solid #eee;
+}
+
+
+/* Outcome */
+.Outcome .Option-name {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding-right: 0.3em;
+}
+
+
+@media (min-width: 1020px) {
+  .Pane.factors {
+    max-width: 265px;
+    border-left: 1px solid #eee;
+  }
+
+  .Pane.options {
+    max-width: 350px;
+  }
+
+  .Pane.outcome {
+    max-width: 300px;
+  }
+  .Option-name {
+    line-height: 1.3em;
+    max-width: 124px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1020px) {
+  .App {
+    min-width: 250px;
+  }
+  .Panes {
+    display: block;
+    padding: 0px 25px;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+  .Pane {
+    display: block;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 35px 0;
+  }
+  .Pane:last-child {
+    border-bottom: none;
+  }
+}
