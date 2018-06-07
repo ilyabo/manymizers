@@ -1,3 +1,10 @@
+# Manymizers
+
+This is an experimental tool for helping to structure decision making. 
+
+![screenshot](doc/manymizers.png)
+
+
 
 ### Development mode
 
