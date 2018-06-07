@@ -1,6 +1,7 @@
 # Manymizers
 
-This is an experimental tool for helping to structure decision making. 
+This is an experimental tool for helping to structure decision making
+inspired by the original version of [ChoiceMap](https://choicemap.co/). 
 
 ![screenshot](doc/manymizers.png)
 
