@@ -2,5 +2,11 @@
   "dependencies": {
     "@cljs-oss/module-deps": "^1.1.1",
     "d3": "^3.5.17"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.0"
+  },
+  "scripts": {
+    "deploy": "lein package && gh-pages -d public"
   }
 }

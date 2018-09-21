@@ -5,10 +5,11 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.946"]
+                 [org.clojure/clojurescript "1.10.339"]
                  [reagent "0.7.0"]
                  [historian "1.0.7"]
-                 [prismatic/schema "1.1.7"]]
+                 [prismatic/schema "1.1.7"]
+                 [cljsjs/d3 "3.5.5-0"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-figwheel "0.5.14"]]
@@ -31,8 +32,6 @@
                        {:source-paths ["src" "env/dev/cljs"]
                         :compiler
                         {:main "manymizers.dev"
-                         :npm-deps
-                         {:d3 "3.5.17"}
                          :output-to "public/js/app.js"
                          :output-dir "public/js/out"
                          :asset-path   "js/out"
@@ -48,8 +47,6 @@
                         :compiler
                         {:output-to "public/js/app.js"
                          :output-dir "public/js/release"
-                         :npm-deps
-                         {:d3 "3.5.17"}
                          :asset-path   "js/out"
                          :optimizations :advanced
                          :pretty-print false}}}}

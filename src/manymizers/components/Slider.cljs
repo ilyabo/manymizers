@@ -1,6 +1,6 @@
 (ns manymizers.components.Slider
   (:require [reagent.core :as r]
-            [d3]))
+            [cljsjs.d3]))
 
 
 
@@ -42,15 +42,17 @@
               props (r/props this)
               on-change  (props :on-change)
               width (:width props)
-              pos->value  #(-> (d3/mouse node) first (/ width) (min 1) (max 0))
-              drag (-> d3/behavior
+              pos->value  #(-> js/d3 (.mouse node) first (/ width) (min 1) (max 0))
+              drag (-> js/d3
+                        .-behavior
                        (.drag)
                        (.on "dragstart" #(swap! state assoc :value (pos->value)))
                        (.on "drag" #(swap! state assoc :dragging true :value (pos->value)))
                        (.on "dragend" #(do
                                         (swap! state assoc :dragging false)
                                         (on-change (pos->value)))))]
-          (-> (d3/select node)
+          (-> js/d3
+              (.select node)
               (.selectAll ".slider-svg")
               (.on "click" #(on-change (pos->value)))
               (.call drag))))})))
