@@ -3,7 +3,7 @@
 This is an experimental tool for helping to structure decision making
 inspired by the original version of [ChoiceMap](https://choicemap.co/). 
 
-[Try in action](https://manymizers.boyandin.me/).
+[Try in action](https://manymizers.netlify.com/).
 
 ![screenshot](doc/manymizers.png)
 
