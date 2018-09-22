@@ -5,6 +5,8 @@ inspired by the original version of [ChoiceMap](https://choicemap.co/).
 
 ![screenshot](doc/manymizers.png)
 
+[Try in action](https://manymizers.boyandin.me/).
+
 
 
 ### Development mode
